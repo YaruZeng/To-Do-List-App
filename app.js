@@ -85,7 +85,7 @@ app.get("/", function (req, res) {
     });
 });
 
-// enter a customer defined list
+// enter a customer defined list by express route parameter
 app.get("/:customListName", function (req, res) {
   const customListName = _.capitalize(req.params.customListName);
   List.findOne({name: customListName})
@@ -122,7 +122,7 @@ app.post("/", function (req, res) {
   } else {
     List.findOne({name: listName}) // customer defined list 
     .then((foundList) => {
-      foundList.items.push(item);
+      foundList.items.push(item); // add a new item into the items array
       foundList.save(); // don't forget to save
       res.redirect("/" + listName);
     });
@@ -143,7 +143,7 @@ app.post("/delete", function(req, res) {
     .catch((error)=> {
       console.log(error);
     })
-  } else {
+  } else { // delete from an array beloing to a document with a specified name
     List.findOneAndUpdate({name: listName}, {$pull: {items: {_id: checkedItemId}}})
     .then(() => {
       console.log("Successfully deleted checked item. ");
