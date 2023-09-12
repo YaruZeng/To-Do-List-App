@@ -29,6 +29,7 @@ Once the job completes, the application will be available at `http://localhost:3
 
 When the application is running, you can create a new list by visiting `http://localhost:3000` + `/listName`. e.g. create a work list by visiting `http://localhost:3000/work`. 
 
-<img width="1920" alt="image" src="https://github.com/YaruZeng/To-Do-List-App/assets/91594306/3be454d7-3562-40db-bb22-f197e4c4341d">
+<img width="1440" alt="image" src="https://github.com/YaruZeng/To-Do-List-App/assets/91594306/cd0e3898-21b1-4472-9260-c448dd6f4f79">
+
 
 
